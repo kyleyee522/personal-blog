@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Made body a flex container so that it would be able to make the main content reach the bottom of the page */
+body {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+}
+
+/* Pushes the icon to the right side of the page */
+header {
+	text-align: end;
+	padding: 50px;
+	background-color: aqua;
+	border-bottom: 5px solid black;
+}
+
+/* Creates a flex direction of row (side-by-side) and gives the remaining height to the main content */
+/* Without height: 100% the main section will only be the height of the largest section */
+/* Adding the align-items: center will make it so that the container and border will only be the size of the element */
+main {
+	display: flex;
+	height: 100%;
+	/* align-items: center; */
+	justify-content: center;
+}
+
+/* Adding a width of 300px allows the flex grow to take space evenly. Without it, the form-section has a slightly larger width so it would have taken up slightly more space than the other section */
+/* flex-grow: 1 will allow both of the sections to take up equal space */
+main section {
+	width: 300px;
+	flex-grow: 1;
+	/* justify-content: center; */
+	background-color: gray;
+}
+
+/* Spaces the section to the right */
+.my-first-blog-section {
+	margin-right: 5px;
+}
+/* Spaces the section to the left */
+.form-section {
+	margin-left: 5px;
+}
+
+/* Makes this flex container so that it is possible to align the items in the center */
+.my-first-blog-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 5px dashed black;
+}
+/* Makes this flex container so that it is possible to align the items in the center */
+.form-section {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border-left: 5px dashed black;
+	align-items: center;
+}
