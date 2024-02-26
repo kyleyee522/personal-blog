@@ -9,6 +9,8 @@ body {
 	flex-direction: column;
 	height: 100vh;
 	justify-content: space-between;
+	/* background-color: black; */
+	/* color: white; */
 }
 
 header {
@@ -17,6 +19,7 @@ header {
 	justify-content: space-between;
 	margin-bottom: 10px;
 	padding: 20px;
+	align-items: center;
 }
 
 header div {
@@ -24,7 +27,16 @@ header div {
 	align-items: center;
 }
 
-header button {
+/* header button {
+	padding: 5px;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	border-radius: 3px;
+} */
+
+#back-button {
+	margin-right: 10px;
 	padding: 5px;
 	font-size: 20px;
 	background-color: black;
@@ -32,9 +44,9 @@ header button {
 	border-radius: 3px;
 }
 
-#back-button {
-	margin-right: 10px;
-}
+/* #back-button:hover {
+	cursor: pointer;
+} */
 
 /* header h1 {
 	padding: 20px;
@@ -56,7 +68,12 @@ main {
 .dark-light-mode {
 	border: none;
 	background: none;
-	font-size: 24px;
+	font-size: 28px;
+}
+
+.dark-light-mode:hover,
+#back-button:hover {
+	cursor: pointer;
 }
 
 .blog-card {
@@ -108,3 +125,17 @@ footer ul {
 footer ul li span {
 	font-weight: 100;
 }
+
+.dark-mode {
+	background-color: #000;
+	color: white;
+}
+
+.light-mode {
+	background-color: white;
+	color: black;
+}
+
+/* .dark-light-mode:hover {
+	content: '&#127769;';
+} */
