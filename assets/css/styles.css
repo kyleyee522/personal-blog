@@ -17,6 +17,7 @@ header {
 	padding: 50px;
 	background-color: aqua;
 	border-bottom: 5px solid black;
+	font-size: 28px;
 }
 
 /* Creates a flex direction of row (side-by-side) and gives the remaining height to the main content */
