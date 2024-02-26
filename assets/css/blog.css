@@ -16,12 +16,29 @@ header {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
+	padding: 20px;
 }
 
 header div {
 	display: flex;
 	align-items: center;
 }
+
+header button {
+	padding: 5px;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	border-radius: 3px;
+}
+
+#back-button {
+	margin-right: 10px;
+}
+
+/* header h1 {
+	padding: 20px;
+} */
 
 footer {
 	border-top: 5px solid black;
@@ -30,6 +47,7 @@ footer {
 
 main {
 	display: flex;
+	flex-direction: column;
 	border-top: 5px solid #000;
 	border-bottom: 5px solid #000;
 	flex-grow: 1;
@@ -38,9 +56,12 @@ main {
 .dark-light-mode {
 	border: none;
 	background: none;
+	font-size: 24px;
 }
 
 .blog-card {
+	display: flex;
+	flex-direction: column;
 	border: 2px solid gray;
 	border-radius: 5px;
 	margin: 10px 30px 10px 30px;
@@ -49,16 +70,41 @@ main {
 
 .blog-card h2 {
 	border-bottom: 1px solid gray;
+	margin: 10px 20px;
+}
+
+.content {
+	margin: 5px 20px 5px 40px;
+}
+
+.author {
+	margin: 10px 20px;
+}
+
+.blog-card div {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
 }
 
 footer {
-	display: flex;
-	flex-direction: column;
-	/* justify-content: center; */
-	align-items: center;
+	text-align: center;
+}
+
+footer h1 {
+	padding: 20px;
 }
 
 footer ul {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bolder;
 	list-style-type: none;
-	flex-grow: 1;
+	text-align: left;
+	padding: 0px 0px 5px 75px;
+}
+
+footer ul li span {
+	font-weight: 100;
 }
