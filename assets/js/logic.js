@@ -3,22 +3,21 @@ const body = document.querySelector('#body');
 // const themeButton = document.getElementById('dark-light-mode');
 // const test = document.querySelector('.test');
 
-let mode = 'light-mode';
+let mode = localStorage.getItem('theme');
+body.setAttribute('class', mode);
 
 themeSwitcher.addEventListener('click', function () {
-	if (mode === 'light-mode') {
+	if (mode === 'dark-mode') {
+		mode = 'light-mode';
+		body.setAttribute('class', 'light-mode');
+		// themeSwitcher.textContent = '🌙';
+		themeSwitcher.textContent = '☀️';
+		localStorage.setItem('theme', 'light-mode');
+	} else {
 		mode = 'dark-mode';
 		body.setAttribute('class', 'dark-mode');
-		// themeButton.textContent = '&#127769;';
+		// themeSwitcher.textContent = '☀️';
 		themeSwitcher.textContent = '🌙';
-		test.textContent('');
-	} else {
-		mode = 'light-mode';
-
-		body.setAttribute('class', 'light-mode');
-		// themeButton.textContent = '&#9728;&#65039;';
-		// themeButton.textContent('asdfasdfasdf ');
-		themeSwitcher.textContent = '☀️';
-		// test.textContent('');
+		localStorage.setItem('theme', 'dark-mode');
 	}
 });
