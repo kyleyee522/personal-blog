@@ -1,4 +1,4 @@
-const themeSwitcher = document.querySelector('.dark-light-mode');
+const themeSwitcher = document.querySelector('.dark-light-mode-button');
 const body = document.querySelector('#body');
 // const themeButton = document.getElementById('dark-light-mode');
 // const test = document.querySelector('.test');

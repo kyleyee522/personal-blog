@@ -11,6 +11,7 @@ body {
 	justify-content: space-between;
 	/* background-color: black; */
 	/* color: white; */
+	transition: 0.5s all ease-in-out;
 }
 
 header {
@@ -65,13 +66,13 @@ main {
 	flex-grow: 1;
 }
 
-.dark-light-mode {
+.dark-light-mode-button {
 	border: none;
 	background: none;
 	font-size: 28px;
 }
 
-.dark-light-mode:hover,
+.dark-light-mode-button:hover,
 #back-button:hover {
 	cursor: pointer;
 }
@@ -139,3 +140,22 @@ footer ul li span {
 /* .dark-light-mode:hover {
 	content: '&#127769;';
 } */
+
+.dark-mode header {
+	border-bottom: 5px solid white;
+}
+
+.dark-mode main {
+	border-top: 5px solid #fff;
+	border-bottom: 5px solid #fff;
+	/* background-color: gray; */
+}
+
+.dark-mode footer {
+	border-top: 5px solid #fff;
+}
+
+.dark-mode #back-button {
+	background-color: white;
+	color: black;
+}

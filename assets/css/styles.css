@@ -9,6 +9,7 @@ body {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	/* transition: 0.5s all ease-in-out; */
 }
 
 /* Pushes the icon to the right side of the page */
@@ -21,13 +22,13 @@ header {
 	margin-bottom: 10px;
 }
 
-.dark-light-mode {
+.dark-light-mode-button {
 	border: none;
 	background: none;
 	font-size: 28px;
 }
 
-.dark-light-mode:hover {
+.dark-light-mode-button:hover {
 	cursor: pointer;
 }
 
@@ -136,14 +137,40 @@ main section {
 	background-color: black;
 	border-radius: 5px;
 	padding: 10px;
+	cursor: pointer;
 }
 
-.dark-mode {
+.dark-mode header,
+.dark-mode .form-section,
+.dark-mode .my-first-blog-section {
 	background-color: #000;
-	color: white;
+	/* color: white; */
+	transition: 0.5s all ease-in-out;
 }
 
 .light-mode {
 	background-color: white;
 	color: black;
+	transition: 0.5s all ease-in-out;
+}
+
+.dark-mode header {
+	border-bottom: 5px solid gray;
+}
+
+.dark-mode main {
+	border-top: 5px solid gray;
+}
+
+.dark-mode .my-first-blog-section {
+	border-right: 5px solid gray;
+}
+
+.dark-mode .form-section {
+	border-left: 5px solid gray;
+}
+
+.dark-mode {
+	background-color: gray;
+	color: white;
 }
