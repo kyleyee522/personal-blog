@@ -1,16 +1,12 @@
 const blogList = document.querySelector('#blog-list');
-
 let storedData;
 
 function retrieveFromLocalStorage() {
 	storedData = JSON.parse(localStorage.getItem('blogs'));
-	// console.log(storedData);
 	renderBlogs();
 }
 
 function renderBlogs() {
-	// resets the blogList div
-	// blogList.innerHTML = '';
 	// Loop through the blog list and render it to the page
 
 	for (i = 0; i < storedData.length; i++) {
@@ -25,8 +21,6 @@ function renderBlogs() {
 		// Append the div with the index to the blogList
 		blogList.appendChild(div);
 
-		// const blogTitle = blog.title;
-		// console.log(blogTitle);
 		// Creates new h2 element
 		const h2 = document.createElement('h2');
 		// Edits the content of the h2
