@@ -4,6 +4,12 @@
 	font-family: sans-serif;
 }
 
+:root {
+	--primarycolor: #000;
+	--secondarycolor: #fff;
+	--tertiarycolor: gray;
+}
+
 /* Made body a flex container so that it would be able to make the main content reach the bottom of the page */
 body {
 	display: flex;
@@ -17,7 +23,7 @@ header {
 	text-align: end;
 	padding: 20px;
 	/* background-color: aqua; */
-	border-bottom: 5px solid black;
+	border-bottom: 5px solid var(--primarycolor);
 	/* font-size: 28px; */
 	margin-bottom: 10px;
 }
@@ -40,8 +46,7 @@ main {
 	height: 100%;
 	/* align-items: center; */
 	justify-content: center;
-	border-top: 5px solid black;
-	/* margin-top: 10px; */
+	border-top: 5px solid var(--primarycolor);
 }
 
 /* Adding a width of 300px allows the flex grow to take space evenly. Without it, the form-section has a slightly larger width so it would have taken up slightly more space than the other section */
@@ -69,113 +74,59 @@ main section {
 	margin-right: 5px;
 }
 
-/* Spaces the section to the left */
-.form-section {
-	margin-left: 5px;
-}
-
 /* Makes this flex container so that it is possible to align the items in the center */
 .my-first-blog-section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-right: 5px solid black;
-}
-/* Makes this flex container so that it is possible to align the items in the center */
-.form-section {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	border-left: 5px solid black;
-	/* align-items: center; */
-	/* padding: 0px 10px; */
+	border-right: 5px solid var(--primarycolor);
 }
 
 .my-first-blog-section h1 {
 	font-size: 54px;
-	color: white;
-	text-shadow: 1px 1px 1px black;
+	color: var(--secondarycolor);
+	text-shadow: 1px 1px 1px var(--primarycolor);
 }
 
-.form-section h1 {
-	font-size: 32px;
-	font-weight: 800;
-}
-
-.form-section div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	/* background-color: red; */
-}
-
-.form-section form {
-	display: flex;
-	flex-direction: column;
-	/* padding: 20px; */
-	width: 95%;
-}
-
-.form-section form label,
-.form-section form input,
-.form-section form textarea {
-	padding: 8px;
-	font-size: 16px;
-	font-weight: bolder;
-}
-
-.form-section form input,
-.form-section form textarea {
-	border: 1px gray solid;
-	border-radius: 5px;
-}
-
-.form-section input[type='submit'] {
-	margin-top: 20px;
-	color: white;
-	background-color: black;
-	border-radius: 5px;
-	padding: 10px;
-	cursor: pointer;
-}
-
+/* Changes the background color for dark mode */
 .dark-mode header,
 .dark-mode .form-section,
 .dark-mode .my-first-blog-section {
 	background-color: #000;
-	/* color: white; */
+	/* color: var(--secondarycolor); */
 	transition: 0.5s all ease-in-out;
 }
 
+/* Changes color for light mode */
 .light-mode {
-	background-color: white;
-	color: black;
+	background-color: var(--secondarycolor);
+	color: var(--primarycolor);
 	transition: 0.5s all ease-in-out;
 }
 
 .dark-mode header {
-	border-bottom: 5px solid gray;
+	border-bottom: 5px solid var(--tertiarycolor);
 }
 
 .dark-mode main {
-	border-top: 5px solid gray;
+	border-top: 5px solid var(--tertiarycolor);
 }
 
 .dark-mode .my-first-blog-section {
-	border-right: 5px solid gray;
+	border-right: 5px solid var(--tertiarycolor);
 }
 
 .dark-mode .form-section {
-	border-left: 5px solid gray;
+	border-left: 5px solid var(--tertiarycolor);
 }
 
 .dark-mode {
-	background-color: gray;
-	color: white;
+	background-color: var(--tertiarycolor);
+	color: var(--secondarycolor);
 	/* transition: 0.5s all ease-in-out; */
 }
 
+/* Changes the color of the my-first-blog-section background */
 .dark-mode .my-first-blog-section h1 {
 	background: linear-gradient(#d85efd, #370047);
 }

@@ -4,6 +4,13 @@
 	font-family: sans-serif;
 }
 
+:root {
+	--primarycolor: #000;
+	--secondarycolor: #fff;
+	--tertiarycolor: gray;
+}
+
+/* Makes the body element the full viewport height and in column format */
 body {
 	display: flex;
 	flex-direction: column;
@@ -14,8 +21,9 @@ body {
 	transition: 0.5s all ease-in-out;
 }
 
+/* Formats the header and spaces the buttons and title to both ends of the header */
 header {
-	border-bottom: 5px solid black;
+	border-bottom: 5px solid var(--primarycolor);
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
@@ -23,25 +31,18 @@ header {
 	align-items: center;
 }
 
+/* Formats the back button and theme switcher button */
 header div {
 	display: flex;
 	align-items: center;
 }
 
-/* header button {
-	padding: 5px;
-	font-size: 20px;
-	background-color: black;
-	color: white;
-	border-radius: 3px;
-} */
-
 #back-button {
 	margin-right: 10px;
 	padding: 5px;
 	font-size: 20px;
-	background-color: black;
-	color: white;
+	background-color: var(--primarycolor);
+	color: var(--secondarycolor);
 	border-radius: 3px;
 }
 
@@ -54,18 +55,20 @@ header div {
 } */
 
 footer {
-	border-top: 5px solid black;
+	border-top: 5px solid var(--primarycolor);
 	margin-top: 10px;
 }
 
+/* Formats the main area where the blog posts will be shown */
 main {
 	display: flex;
 	flex-direction: column;
-	border-top: 5px solid #000;
-	border-bottom: 5px solid #000;
+	border-top: 5px solid var(--primarycolor);
+	border-bottom: 5px solid var(--primarycolor);
 	flex-grow: 1;
 }
 
+/* Formats the theme switcher button */
 .dark-light-mode-button {
 	border: none;
 	background: none;
@@ -77,17 +80,19 @@ main {
 	cursor: pointer;
 }
 
+/* Has the blog cards in column format and each blog post will grow evenly (take up even space) */
 .blog-card {
 	display: flex;
 	flex-direction: column;
-	border: 2px solid gray;
+	border: 2px solid var(--tertiarycolor);
 	border-radius: 5px;
 	margin: 10px 30px 10px 30px;
 	flex-grow: 1;
 }
 
+/* Blog title formatting */
 .blog-card h2 {
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid var(--tertiarycolor);
 	margin: 10px 20px;
 }
 
@@ -99,6 +104,7 @@ main {
 	margin: 10px 20px;
 }
 
+/* Separates the content and the author so that the author is at the bottom of the blog card */
 .blog-card div {
 	display: flex;
 	flex-direction: column;
@@ -123,46 +129,56 @@ footer ul {
 	padding: 0px 0px 5px 75px;
 }
 
-footer ul li span {
+footer ul li a {
+	color: var(--primarycolor);
 	font-weight: 100;
+	transition: 0.5s all ease-in-out;
+}
+footer ul li a,
+footer ul li a:visited {
+	text-decoration: none;
 }
 
 .dark-mode {
-	/* background-color: #000; */
-	background-color: gray;
-	color: white;
+	/* background-color: var(--primarycolor); */
+	background-color: var(--tertiarycolor);
+	color: var(--secondarycolor);
 }
 
 .light-mode {
-	background-color: white;
-	color: black;
+	background-color: var(--secondarycolor);
+	color: var(--primarycolor);
 }
 
 .dark-mode body {
-	background-color: gray;
+	background-color: var(--tertiarycolor);
 }
 
 .dark-mode header {
-	border-bottom: 5px solid gray;
-	background-color: #000;
+	border-bottom: 5px solid var(--tertiarycolor);
+	background-color: var(--primarycolor);
 }
 
 .dark-mode main {
-	border-top: 5px solid gray;
-	border-bottom: 5px solid gray;
+	border-top: 5px solid var(--tertiarycolor);
+	border-bottom: 5px solid var(--tertiarycolor);
 	background-color: #222222;
 }
 
 .dark-mode footer {
-	border-top: 5px solid gray;
-	background-color: #000;
+	border-top: 5px solid var(--tertiarycolor);
+	background-color: var(--primarycolor);
+}
+
+.dark-mode footer a {
+	color: var(--secondarycolor);
 }
 
 .dark-mode #back-button {
-	background-color: white;
-	color: black;
+	background-color: var(--secondarycolor);
+	color: var(--primarycolor);
 }
 
 .dark-mode .blog-card h2 {
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid var(--secondarycolor);
 }
