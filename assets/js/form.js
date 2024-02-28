@@ -8,7 +8,7 @@ const blogContent = document.querySelector('#blog-content');
 let blogPosts = [];
 let blog = {};
 
-function loadFromLocalStorage() {
+function loadFromLocalStorage(event) {
 	let storedData = JSON.parse(localStorage.getItem('blogs'));
 
 	if (storedData) {
@@ -20,16 +20,26 @@ function updateLocalStorage() {
 	localStorage.setItem('blogs', JSON.stringify(blogPosts));
 }
 
-submitBtn.addEventListener('click', function () {
-	blog = {
-		title: blogTitle.value,
-		content: blogContent.value,
-		author: username.value,
-	};
+submitBtn.addEventListener('click', function (event) {
+	if (username.value === '') {
+		alert('Please enter your username');
+		event.preventDefault();
+	} else if (blogTitle.value === '') {
+		alert('Please enter a title');
+		event.preventDefault();
+	} else if (blogContent.value === '') {
+		alert('Please enter something to say');
+		event.preventDefault();
+	} else {
+		blog = {
+			title: blogTitle.value,
+			content: blogContent.value,
+			author: username.value,
+		};
+		blogPosts.push(blog);
 
-	blogPosts.push(blog);
-
-	updateLocalStorage();
+		updateLocalStorage();
+	}
 });
 
 window.onload = loadFromLocalStorage;

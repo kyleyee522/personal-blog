@@ -128,7 +128,8 @@ footer ul li span {
 }
 
 .dark-mode {
-	background-color: #000;
+	/* background-color: #000; */
+	background-color: gray;
 	color: white;
 }
 
@@ -141,21 +142,31 @@ footer ul li span {
 	content: '&#127769;';
 } */
 
+.dark-mode body {
+	background-color: gray;
+}
+
 .dark-mode header {
-	border-bottom: 5px solid white;
+	border-bottom: 5px solid gray;
+	background-color: #000;
 }
 
 .dark-mode main {
-	border-top: 5px solid #fff;
-	border-bottom: 5px solid #fff;
-	/* background-color: gray; */
+	border-top: 5px solid gray;
+	border-bottom: 5px solid gray;
+	background-color: #222222;
 }
 
 .dark-mode footer {
-	border-top: 5px solid #fff;
+	border-top: 5px solid gray;
+	background-color: #000;
 }
 
 .dark-mode #back-button {
 	background-color: white;
 	color: black;
+}
+
+.dark-mode .blog-card h2 {
+	border-bottom: 1px solid #fff;
 }

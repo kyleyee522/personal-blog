@@ -174,3 +174,7 @@ main section {
 	background-color: gray;
 	color: white;
 }
+
+.dark-mode .my-first-blog-section h1 {
+	background: linear-gradient(#d85efd, #370047);
+}
