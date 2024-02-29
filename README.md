@@ -7,3 +7,9 @@
 * This project was created to help utilize HTML and CSS and also the local storage. Local storage was used to store items such as different blog posts and to tell whether the user's page is in dark or light mode. By putting these items in local storage, it would be possible to retrieve all of these items. In addition, local storage was used to make sure these items persisted when the user opens up the website again or if they refresh the page.
 
 ## Assets
+
+The picture below is the landing page for the blogs website:
+![](./assets/images/blog-landing-page.png)
+
+The picture below is the page where the blogs will be posted:
+![](./assets/images/blogs-page.png)
