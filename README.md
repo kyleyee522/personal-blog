@@ -6,6 +6,8 @@
 
 * This project was created to help utilize HTML and CSS and also the local storage. Local storage was used to store items such as different blog posts and to tell whether the user's page is in dark or light mode. By putting these items in local storage, it would be possible to retrieve all of these items. In addition, local storage was used to make sure these items persisted when the user opens up the website again or if they refresh the page.
 
+* To visit this website, you may clone the repo and open the index.html file or visit: https://kyleyee522.github.io/personal-blog/
+
 ## Assets
 
 The picture below is the landing page for the blogs website:
